@@ -8,7 +8,7 @@ function Home() {
         <div className="absolute inset-0 flex items-center justify-center">
           <div className="text-center p-4 sm:p-6 md:p-8 lg:p-12 max-w-4xl mx-auto">
             <div className="my-intro animate-typing text-black font-extrabold text-3xl sm:text-3xl md:text-4xl lg:text-5xl uppercase tracking-wider sm:tracking-widest break-words mb-4 sm:mb-6">
-              Hey, I'm Ayush 
+              Hey, I'm Ayush Gupta
             </div>
             <p className="text-sm sm:text-base md:text-lg lg:text-xl max-w-2xl mx-auto">
               A Result-Oriented Web Developer building and managing Websites and
