@@ -8,11 +8,10 @@ const Navbar = () => {
 
   return (
     <>
-      <nav className="flex justify-between items-center h-20 shadow-lg px-6">
-      <h3 className="text-4xl font-semibold bg-gradient-to-r from-indigo-900 via-purple-800 to-gray-900 bg-clip-text text-transparent">
-  Ayush Gupta
-</h3>
-
+      <nav className="flex justify-between items-center h-28 shadow-lg px-6">
+      <h3 className="text-4xl font-semibold bg-gradient-to-r from-cyan-900 via-cyan-700 to-cyan-500 bg-clip-text text-transparent">
+      Ayush Gupta
+    </h3>
 
         {/* Mobile Menu Icon */}
         <button
@@ -31,7 +30,7 @@ const Navbar = () => {
           <li className="border-b md:border-none">
             <Link
               to="/"
-              className="block text-xl text-black py-4 md:py-0 pl-6 md:pl-0"
+              className="block text-xl text-black py-4 md:py-0 pl-6 md:pl-0 font-bold"
               onClick={() => setMobile(false)}
             >
               Home
@@ -40,7 +39,7 @@ const Navbar = () => {
           <li className="border-b md:border-none">
             <Link
               to="/about"
-              className="block text-xl text-black py-4 md:py-0 pl-6 md:pl-0"
+              className="block text-xl text-black py-4 md:py-0 pl-6 md:pl-0 font-bold"
               onClick={() => setMobile(false)}
             >
               About
@@ -49,7 +48,7 @@ const Navbar = () => {
           <li className="border-b md:border-none">
             <Link
               to="/project"
-              className="block text-xl text-black py-4 md:py-0 pl-6 md:pl-0"
+              className="block text-xl text-black py-4 md:py-0 pl-6 md:pl-0 font-bold"
               onClick={() => setMobile(false)}
             >
               Projects
@@ -58,7 +57,7 @@ const Navbar = () => {
           <li className="border-b md:border-none">
             <Link
               to="/contact"
-              className="block text-xl text-black py-4 md:py-0 pl-6 md:pl-0"
+              className="block text-xl text-black py-4 md:py-0 pl-6 md:pl-0 font-bold"
               onClick={() => setMobile(false)}
             >
               Contact
