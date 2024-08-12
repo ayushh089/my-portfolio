@@ -14,11 +14,11 @@ function About() {
       <div className=" flex-col flex lg:flex-row mt-20">
         <div className="flex flex-col lg:max-w-[50%] lg:ml-32">
           <div className="font-bold text-2xl">Get to know me!</div>
-          <div className="mt-5 text-lg font-normal">
-            <div>
+          <div className="mt-5 text-lg font-normal text-wrap">
+            <div className="">
               I'm a Frontend Focused Web Developer building and managing the
               Front-end of Websites and Web Applications that leads to the
-              success of the overall product. Check out some of my work in the
+              success of the overall product.Check out some of my work in the
               Projects section.
             </div>
             <div>

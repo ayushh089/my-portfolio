@@ -8,12 +8,11 @@ const Navbar = () => {
 
   return (
     <>
-      <nav className="flex justify-between items-center h-28 shadow-lg px-6">
-      <h3 className="text-4xl font-semibold bg-gradient-to-r from-cyan-900 via-cyan-700 to-cyan-500 bg-clip-text text-transparent">
-      Ayush Gupta
-    </h3>
+      <nav className="fixed top-0 w-full flex justify-between items-center h-28 shadow-lg px-6 bg-white z-50">
+        <h3 className="text-4xl font-semibold bg-gradient-to-r from-cyan-900 via-cyan-700 to-cyan-500 bg-clip-text text-transparent">
+          Ayush Gupta
+        </h3>
 
-        {/* Mobile Menu Icon */}
         <button
           className="md:hidden text-2xl"
           onClick={() => setMobile(!Mobile)}
@@ -21,11 +20,10 @@ const Navbar = () => {
           {Mobile ? <ImCross /> : <FaBars />}
         </button>
 
-        {/* Navigation Links */}
         <ul
           className={`${
             Mobile ? "block" : "hidden"
-          } md:flex md:items-center md:space-x-8 absolute md:static top-16 left-0 w-full md:w-auto bg-white md:bg-transparent shadow-md md:shadow-none`}
+          } md:flex md:items-center md:space-x-8 absolute md:static top-16 left-0 w-full md:w-auto bg-white md:bg-transparent shadow-md md:shadow-none z-50`}
         >
           <li className="border-b md:border-none">
             <Link

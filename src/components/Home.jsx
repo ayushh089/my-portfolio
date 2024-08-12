@@ -1,9 +1,14 @@
 import React from "react";
-import About from "./About"
+import About from "./About";
+import Navbar from "./Navbar";
+
 function Home() {
   return (
     <div className="relative">
-      <section className="relative h-screen w-full overflow-hidden">
+      <section>
+        <Navbar />
+      </section>
+      <section className="relative h-screen w-full mt-28 overflow-hidden">
         <div className="absolute inset-0 bg-[url('https://www.rammaheshwari.com/assets/svg/common-bg.svg')] bg-cover bg-center opacity-20"></div>
         <div className="absolute inset-0 flex items-center justify-center">
           <div className="text-center p-4 sm:p-6 md:p-8 lg:p-12 max-w-4xl mx-auto">
@@ -34,7 +39,7 @@ function Home() {
       </section>
 
       <section id="about" className="bg-white py-16">
-        <About/>
+        <About />
       </section>
     </div>
   );
