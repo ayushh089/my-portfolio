@@ -2,7 +2,7 @@ import React from "react";
 import skillData from "./skills.json";
 function About() {
   return (
-    <section className="flex flex-col items-center justify-center mt-15 px-4 bg-white">
+    <section className="flex flex-col items-center justify-center mt-15 px-4 bg-white ">
       <h2 className="text-4xl font-extrabold text-gray-800 mb-4 tracking-tighter mt-10">
         ABOUT ME
       </h2>
@@ -42,7 +42,7 @@ function About() {
           </div>
           <div className="inline-block mt-8">
             <button
-              className="bg-cyan-600 text-white font-semibold rounded-lg mb-5
+              className="bg-cyan-600 text-white font-semibold rounded-lg mb-12
                    w-44 h-12
                    md:text-1xl text-base 
                    flex items-center justify-center

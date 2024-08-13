@@ -5,27 +5,23 @@ import Project from "./Project";
 import Footer from "./Footer";
 function Home() {
   return (
-    <div className="relative">
-      <section>
-        <Navbar />
-      </section>
-      <section
-        id="home"
-        className="relative h-screen w-full mt-28 overflow-hidden"
-      >
-        <div className="absolute inset-0 bg-[url('https://www.rammaheshwari.com/assets/svg/common-bg.svg')] bg-cover bg-center opacity-30"></div>
-        <div className="absolute inset-0 flex items-center justify-center">
-          <div className="text-center p-4 sm:p-6 md:p-8 lg:p-12 max-w-4xl mx-auto">
-            <div className="my-intro animate-typing text-black font-extrabold text-3xl sm:text-3xl md:text-4xl lg:text-5xl uppercase tracking-wider sm:tracking-widest break-words mb-4 sm:mb-6">
-              Hey, I'm Ayush Gupta
-            </div>
-            <p className="text-sm sm:text-base md:text-lg lg:text-xl max-w-2xl mx-auto">
-              A Result-Oriented Web Developer building and managing Websites and
-              Web Applications that lead to the success of the overall product
-            </p>
-            <div className="inline-block mt-5">
-              <button
-                className="bg-cyan-600 text-white font-semibold rounded-lg 
+    <section
+      id="home"
+      className="relative h-screen w-full mt-28 overflow-hidden"
+    >
+      <div className="absolute inset-0 bg-[url('https://www.rammaheshwari.com/assets/svg/common-bg.svg')] bg-cover bg-center opacity-30"></div>
+      <div className="absolute inset-0 flex items-center justify-center">
+        <div className="text-center p-4 sm:p-6 md:p-8 lg:p-12 max-w-4xl mx-auto">
+          <div className="my-intro animate-typing text-black font-extrabold text-3xl sm:text-3xl md:text-4xl lg:text-5xl uppercase tracking-wider sm:tracking-widest break-words mb-4 sm:mb-6">
+            Hey, I'm Ayush Gupta
+          </div>
+          <p className="text-sm sm:text-base md:text-lg lg:text-xl max-w-2xl mx-auto">
+            A Result-Oriented Web Developer building and managing Websites and
+            Web Applications that lead to the success of the overall product
+          </p>
+          <div className="inline-block mt-5">
+            <button
+              className="bg-cyan-600 text-white font-semibold rounded-lg 
                    w-44 h-16
                    md:text-1xl text-base 
                    flex items-center justify-center
@@ -34,21 +30,13 @@ function Home() {
                    transition duration-300 ease-in-out 
                    hover:bg-cyan-700 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:ring-opacity-50
                    transform hover:scale-105"
-              >
-                Projects
-              </button>
-            </div>
+            >
+              Projects
+            </button>
           </div>
         </div>
-      </section>
-      <section id="about" className="bg-white ">
-        <About />
-      </section>
-      <section id="projects" className="bg-white ">
-        <Project />
-      </section>
-      <Footer />
-    </div>
+      </div>
+    </section>
   );
 }
 
