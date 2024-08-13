@@ -29,7 +29,7 @@ function Project() {
             </div>
             <div className="flex flex-col mt-8 sm:mt-0 sm:ml-8 w-full sm:w-1/2">
               <h2 className="text-3xl font-bold mb-4">Project {index + 1}</h2>
-              <p className="text-gray-700 text-lg mb-8">
+              <p className="text-gray-700 text-lg mb-8 font-thin">
                 {projectsData.projects[key]}
               </p>
               <div className="inline-block">

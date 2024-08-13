@@ -19,9 +19,10 @@ function Home() {
             A Result-Oriented Web Developer building and managing Websites and
             Web Applications that lead to the success of the overall product
           </p>
-          <div className="inline-block mt-5">
-            <button
-              className="bg-cyan-600 text-white font-semibold rounded-lg 
+          <a href="#projects">
+            <div className="inline-block mt-5">
+              <button
+                className="bg-cyan-600 text-white font-semibold rounded-lg 
                    w-44 h-16
                    md:text-1xl text-base 
                    flex items-center justify-center
@@ -30,10 +31,11 @@ function Home() {
                    transition duration-300 ease-in-out 
                    hover:bg-cyan-700 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:ring-opacity-50
                    transform hover:scale-105"
-            >
-              Projects
-            </button>
-          </div>
+              >
+                Projects
+              </button>
+            </div>
+          </a>
         </div>
       </div>
     </section>

@@ -1,14 +1,16 @@
 import React, { useState } from "react";
 import { FaBars } from "react-icons/fa";
 import { ImCross } from "react-icons/im";
-import ayush_name from "../assets/ayush.png"
+import ayush_name from "../assets/ayush.png";
 const Navbar = () => {
   const [Mobile, setMobile] = useState(false);
 
   return (
     <>
       <nav className="fixed top-0 w-full flex justify-between items-center h-28 px-4 bg-white z-50 border-b-2">
-        <img src={ayush_name} className="h-32 w-80 mt-2"></img>
+        <a href="#home">
+          <img src={ayush_name} className="h-32 w-80 mt-2 cursor-pointer"></img>
+        </a>
 
         <button
           className="md:hidden text-2xl"
