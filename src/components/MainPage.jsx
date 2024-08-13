@@ -17,7 +17,7 @@ function MainPage() {
       <section id="about"className="scroll-mt-24" >
         <About />
       </section>
-      <section id="projects" >
+      <section id="projects" className="scroll-mt-24" >
         <Project />
       </section>
       <section id="contact" >
