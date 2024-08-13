@@ -3,15 +3,16 @@ import About from "./About";
 import Navbar from "./Navbar";
 import Project from "./Project";
 import Footer from "./Footer";
-
-
 function Home() {
   return (
     <div className="relative">
       <section>
         <Navbar />
       </section>
-      <section className="relative h-screen w-full mt-28 overflow-hidden">
+      <section
+        id="home"
+        className="relative h-screen w-full mt-28 overflow-hidden"
+      >
         <div className="absolute inset-0 bg-[url('https://www.rammaheshwari.com/assets/svg/common-bg.svg')] bg-cover bg-center opacity-30"></div>
         <div className="absolute inset-0 flex items-center justify-center">
           <div className="text-center p-4 sm:p-6 md:p-8 lg:p-12 max-w-4xl mx-auto">
@@ -40,16 +41,13 @@ function Home() {
           </div>
         </div>
       </section>
-
       <section id="about" className="bg-white ">
         <About />
       </section>
-      <section id="about" className="bg-white ">
+      <section id="projects" className="bg-white ">
         <Project />
       </section>
-      <Footer/>
-
-      
+      <Footer />
     </div>
   );
 }

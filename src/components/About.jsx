@@ -6,7 +6,7 @@ function About() {
       <h2 className="text-4xl font-extrabold text-gray-800 mb-4 tracking-tighter mt-10">
         ABOUT ME
       </h2>
-      <div className="w-8 h-1.5 bg-indigo-500 mb-8 rounded-xl"></div>
+      <div className="w-8 h-1.5 bg-cyan-500 mb-8 rounded-xl"></div>
       <p className="text-center text-gray-600 max-w-3xl text-lg">
         Here you will find more information about me, what I do, and my current
         skills mostly in terms of programming and technology

@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
 import { FaBars } from "react-icons/fa";
 import { ImCross } from "react-icons/im";
 
@@ -8,7 +7,7 @@ const Navbar = () => {
 
   return (
     <>
-      <nav className="fixed top-0 w-full flex justify-between items-center h-28  px-6 bg-white z-50">
+      <nav className="fixed top-0 w-full flex justify-between items-center h-28 px-6 bg-white z-50 border-b-2">
         <h3 className="text-4xl font-semibold bg-gradient-to-r from-cyan-900 via-cyan-700 to-cyan-500 bg-clip-text text-transparent">
           Ayush Gupta
         </h3>
@@ -22,44 +21,44 @@ const Navbar = () => {
 
         <ul
           className={`${
-            Mobile ? "block" : "hidden"
+            Mobile ? "block mt-3" : "hidden"
           } md:flex md:items-center md:space-x-8 absolute md:static top-16 left-0 w-full md:w-auto pr-10 bg-white md:bg-transparent shadow-md md:shadow-none z-50`}
         >
           <li className="border-b md:border-none">
-            <Link
-              to="/"
-              className="block text-xl text-black py-4 md:py-0 pl-6 md:pl-0 font-bold"
+            <a
+              href="#home"
+              className="block text-xl text-black py-4 md:py-0 pl-6 md:pl-0 font-bold hover:text-cyan-500 hover:underline"
               onClick={() => setMobile(false)}
             >
               Home
-            </Link>
+            </a>
           </li>
           <li className="border-b md:border-none">
-            <Link
-              to="/about"
-              className="block text-xl text-black py-4 md:py-0 pl-6 md:pl-0 font-bold"
+            <a
+              href="#about"
+              className="block text-xl text-black py-4 md:py-0 pl-6 md:pl-0 font-bold hover:text-cyan-500 hover:underline"
               onClick={() => setMobile(false)}
             >
               About
-            </Link>
+            </a>
           </li>
           <li className="border-b md:border-none">
-            <Link
-              to="/project"
-              className="block text-xl text-black py-4 md:py-0 pl-6 md:pl-0 font-bold"
+            <a
+              href="#projects"
+              className="block text-xl text-black py-4 md:py-0 pl-6 md:pl-0 font-bold hover:text-cyan-500 hover:underline"
               onClick={() => setMobile(false)}
             >
               Projects
-            </Link>
+            </a>
           </li>
           <li className="border-b md:border-none">
-            <Link
-              to="/contact"
-              className="block text-xl text-black py-4 md:py-0 pl-6 md:pl-0 font-bold"
+            <a
+              href="#contact"
+              className="block text-xl text-black py-4 md:py-0 pl-6 md:pl-0 font-bold hover:text-cyan-500 hover:underline"
               onClick={() => setMobile(false)}
             >
               Contact
-            </Link>
+            </a>
           </li>
         </ul>
       </nav>
