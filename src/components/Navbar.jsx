@@ -2,14 +2,35 @@ import React, { useState } from "react";
 import { FaBars } from "react-icons/fa";
 import { ImCross } from "react-icons/im";
 import ayush_name from "../assets/ayush.png";
+import { useGSAP } from "@gsap/react";
+import gsap from "gsap";
 const Navbar = () => {
+  useGSAP(() => {
+    var tl = gsap.timeline();
+    tl.from(".my-logo", {
+      y: -20,
+      opacity: 0,
+      rotate:720,
+      duration: 0.5,
+      delay: 0.5,
+    });
+    tl.from("h4", {
+      y: -20,
+      opacity: 0,
+      duration: 0.7,
+      stagger: 0.3,
+    });
+  });
   const [Mobile, setMobile] = useState(false);
 
   return (
     <>
       <nav className="fixed top-0 w-full flex justify-between items-center h-28 px-4 bg-white z-50 border-b-2">
         <a href="#home">
-          <img src={ayush_name} className="h-32 w-80 mt-2 cursor-pointer"></img>
+          <img
+            src={ayush_name}
+            className="my-logo h-32 w-80 mt-2 cursor-pointer"
+          ></img>
         </a>
 
         <button
@@ -30,7 +51,7 @@ const Navbar = () => {
               className="block text-xl text-black py-4 md:py-0 pl-6 md:pl-0 font-bold hover:text-cyan-500 hover:underline"
               onClick={() => setMobile(false)}
             >
-              Home
+              <h4>Home</h4>
             </a>
           </li>
           <li className="border-b md:border-none">
@@ -39,7 +60,7 @@ const Navbar = () => {
               className="block text-xl text-black py-4 md:py-0 pl-6 md:pl-0 font-bold hover:text-cyan-500 hover:underline"
               onClick={() => setMobile(false)}
             >
-              About
+              <h4>About</h4>
             </a>
           </li>
           <li className="border-b md:border-none">
@@ -48,7 +69,7 @@ const Navbar = () => {
               className="block text-xl text-black py-4 md:py-0 pl-6 md:pl-0 font-bold hover:text-cyan-500 hover:underline"
               onClick={() => setMobile(false)}
             >
-              Projects
+              <h4>Projects</h4>
             </a>
           </li>
           <li className="border-b md:border-none">
@@ -57,7 +78,7 @@ const Navbar = () => {
               className="block text-xl text-black py-4 md:py-0 pl-6 md:pl-0 font-bold hover:text-cyan-500 hover:underline"
               onClick={() => setMobile(false)}
             >
-              Contact
+              <h4>Contact</h4>
             </a>
           </li>
         </ul>

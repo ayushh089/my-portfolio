@@ -3,7 +3,10 @@ import About from "./About";
 import Navbar from "./Navbar";
 import Project from "./Project";
 import Footer from "./Footer";
+import { useGSAP } from "@gsap/react";
+import gsap from "gsap";
 function Home() {
+
   return (
     <section
       id="home"
