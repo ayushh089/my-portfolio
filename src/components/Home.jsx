@@ -17,9 +17,9 @@ function Home() {
     tl.from(".context-about-me", {
       x: 1500,
       opacity: 0,
-      duration: 1,
-      // stagger: 0.3,
-    });
+      duration: 0.7,
+      stagger: 0.3,
+    }); 
   });
   return (
     <section

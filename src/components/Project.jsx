@@ -18,17 +18,17 @@ function Project() {
         created, with each project containing its own case study.
       </p>
 
-      <div className="flex flex-col mt-20 justify-center px-4 md:px-36">
+      <div className="flex flex-col mt-32 justify-center px-4 md:px-36">
         {Object.keys(projectsData.projects).map((key, index) => (
           <div
             key={index}
-            className="flex flex-col sm:flex-row sm:items-center mb-12"
+            className="flex flex-col sm:flex-row sm:items-center mb-20"
           >
             <div className="w-full sm:w-1/2">
               <img src={images[key]} alt={key} className="w-full h-auto" />
             </div>
-            <div className="flex flex-col mt-8 sm:mt-0 sm:ml-8 w-full sm:w-1/2">
-              <h2 className="text-3xl font-bold mb-4">Project {index + 1}</h2>
+            <div className="flex flex-col justify-center items-center sm:items-start sm:justify-start mt-8 sm:mt-0 sm:ml-8 w-full sm:w-1/2">
+              <h2 className=" text-3xl font-bold mb-4">Project {index + 1}</h2>
               <p className="text-gray-700 text-lg mb-8 font-thin">
                 {projectsData.projects[key]}
               </p>

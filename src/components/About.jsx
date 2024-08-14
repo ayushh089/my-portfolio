@@ -11,17 +11,17 @@ function About() {
         Here you will find more information about me, what I do, and my current
         skills mostly in terms of programming and technology
       </p>
-      <div className=" flex-col flex lg:flex-row mt-20">
+      <div className=" flex-col flex lg:flex-row mt-32">
         <div className="flex flex-col lg:max-w-[50%] lg:ml-32">
           <div className="font-bold text-2xl">Get to know me!</div>
           <div className="mt-5 text-lg font-normal text-wrap">
-            <div className="">
+            <div className="font-thin">
               I'm a Frontend Focused Web Developer building and managing the
               Front-end of Websites and Web Applications that leads to the
               success of the overall product.Check out some of my work in the
               Projects section.
             </div>
-            <div>
+            <div className="font-thin">
               I also like sharing content related to the stuff that I have
               learned over the years in Web Development so it can help other
               people of the Dev Community. Feel free to Connect or Follow me on
@@ -31,10 +31,10 @@ function About() {
                 target="_blank"
                 className="text-cyan-600 font-extrabold"
               >
-                <u>LinkedIn</u>.
+                <u className="font-medium">LinkedIn</u>.
               </a>
             </div>
-            <div>
+            <div className="font-thin">
               I'm open to Job opportunities where I can contribute, learn and
               grow. If you have a good opportunity that matches my skills and
               experience then don't hesitate to contact me.
@@ -56,7 +56,7 @@ function About() {
             </button>
           </div>
         </div>
-        <div className="mt-10 flex flex-col lg:max-w-[50%] lg:ml-32">
+        <div className="mt-10 lg:mt-0 flex flex-col lg:max-w-[50%] lg:ml-32">
           <div className="font-bold text-2xl">My Skills</div>
           <div className="mt-5 text-lg flex flex-row flex-wrap">
             {skillData.skills.map((skill, index) => (
