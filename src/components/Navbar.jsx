@@ -14,6 +14,10 @@ const Navbar = () => {
       duration: 0.5,
       delay: 0.5,
     });
+    tl.from(".icon-bar",{
+      rotate:360,
+      duration:0.5,
+    })
     tl.from("h4", {
       y: -20,
       opacity: 0,
@@ -29,12 +33,12 @@ const Navbar = () => {
         <a href="#home">
           <img
             src={ayush_name}
-            className="my-logo h-32 w-80 mt-2 cursor-pointer"
+            className="my-logo h-28 w-36 mt-2 cursor-pointer"
           ></img>
         </a>
 
         <button
-          className="md:hidden text-2xl"
+          className=" icon-bar md:hidden text-2xl"
           onClick={() => setMobile(!Mobile)}
         >
           {Mobile ? <ImCross /> : <FaBars />}
