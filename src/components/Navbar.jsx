@@ -29,11 +29,11 @@ const Navbar = () => {
 
   return (
     <>
-      <nav className="fixed top-0 w-full flex justify-between items-center h-28 px-4 bg-white z-50 border-b-2">
+      <nav className="fixed top-0 w-full flex justify-between items-center h-24 px-4 bg-white z-50 border-b-2">
         <a href="#home">
           <img
             src={ayush_name}
-            className="my-logo h-28 w-36 mt-2 cursor-pointer"
+            className="my-logo h-20 w-20 mt-2 cursor-pointer"
           ></img>
         </a>
 
