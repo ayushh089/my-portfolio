@@ -6,7 +6,21 @@ import Footer from "./Footer";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 function Home() {
-
+  useGSAP(() => {
+    var tl = gsap.timeline();
+    tl.from(".my-intro", {
+      x: -1500,
+      opacity: 0,
+      duration: 1,
+      delay: 0.5,
+    });
+    tl.from(".context-about-me", {
+      x: 1500,
+      opacity: 0,
+      duration: 1,
+      // stagger: 0.3,
+    });
+  });
   return (
     <section
       id="home"
@@ -18,7 +32,7 @@ function Home() {
           <div className="my-intro animate-typing text-black font-extrabold text-3xl sm:text-3xl md:text-4xl lg:text-5xl uppercase tracking-wider sm:tracking-widest break-words mb-4 sm:mb-6">
             Hey, I'm Ayush Gupta
           </div>
-          <p className="text-sm sm:text-base md:text-lg lg:text-xl max-w-2xl mx-auto">
+          <p className="context-about-me text-sm sm:text-base md:text-lg lg:text-xl max-w-2xl mx-auto">
             A Result-Oriented Web Developer building and managing Websites and
             Web Applications that lead to the success of the overall product
           </p>
