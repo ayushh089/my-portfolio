@@ -35,7 +35,7 @@ function Home() {
       className="relative h-screen w-full mt-28 overflow-hidden"
     >
       <div className="absolute inset-0 bg-[url('https://www.rammaheshwari.com/assets/svg/common-bg.svg')] bg-cover bg-center opacity-30"></div>
-      <div className="absolute inset-0  flex items-center  justify-center mt-48">
+      <div className="absolute inset-0  flex items-center  justify-center ">
         <div className="text-center p-4 sm:p-6 md:p-8 lg:p-12  mx-auto">
           <div className="my-intro animate-typing text-black font-extrabold font-body  text-4xl sm:text-3xl md:text-4xl lg:text-6xl uppercase tracking-wider sm:tracking-widest break-words mb-4 sm:mb-6">
             Hey, I'm Ayush Gupta
