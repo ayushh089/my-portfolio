@@ -1,9 +1,34 @@
-import React from "react";
+import React, { useEffect, useRef } from "react";
 import skillData from "./skills.json";
+import { useGSAP } from "@gsap/react";
+import gsap from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+gsap.registerPlugin(ScrollTrigger);
+
 function About() {
+  const sectionRef = useRef(null);
+
+  useGSAP(() => {
+    const tl = gsap.timeline({
+      scrollTrigger: {
+        trigger: sectionRef.current,
+        start: "top center",
+        end: "bottom center",
+        // scrub: 1,
+      },
+    });
+
+    tl.from(".about-me", {
+      opacity: 0,
+      scale: 1,
+      duration: 0.4,
+      rotate:360,
+      x:1500
+    });
+  }, { scope: sectionRef });
   return (
-    <section className="flex flex-col items-center justify-center mt-15 px-4 bg-slate-50 ">
-      <h2 className="text-4xl font-extrabold text-gray-800 mb-4 tracking-tighter mt-10">
+    <section ref={sectionRef} className="flex flex-col items-center justify-center mt-15 px-4 bg-slate-50 ">
+      <h2 className="about-me text-4xl font-extrabold text-gray-800 mb-4 tracking-tighter mt-10">
         ABOUT ME
       </h2>
       <div className="w-8 h-1.5 bg-cyan-500 mb-8 rounded-xl"></div>
