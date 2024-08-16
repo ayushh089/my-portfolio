@@ -57,6 +57,7 @@ function Home() {
             A Result-Oriented Web Developer building and managing Websites and
             Web Applications that lead to the success of the overall product
           </p>
+          <div className="flex flex-col sm:flex-row justify-center items-center mt-10 space-y-4 sm:space-y-0 sm:space-x-4">
           <a href="#projects">
             <div className="inline-block mt-10 project-button">
               <button
@@ -94,6 +95,7 @@ function Home() {
               </button>
             </div>
           </a>
+          </div>
         </div>
       </div>
     </section>
