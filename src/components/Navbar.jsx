@@ -9,8 +9,9 @@ const Navbar = () => {
     var tl = gsap.timeline();
     tl.from(".my-logo", {
       y: -20,
+      scale:2,
       opacity: 0,
-      rotate:720,
+      rotate:1440,
       duration: 0.5,
       delay: 0.5,
     });
