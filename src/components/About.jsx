@@ -1,43 +1,13 @@
-import React, { useEffect, useRef } from "react";
+import React from "react";
 import skillData from "./skills.json";
-import { useGSAP } from "@gsap/react";
-import gsap from "gsap";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
-gsap.registerPlugin(ScrollTrigger);
-
 function About() {
-  const sectionRef = useRef(null);
-
-  useGSAP(() => {
-    const tl = gsap.timeline({
-      scrollTrigger: {
-        trigger: sectionRef.current,
-        start: "top center",
-        end: "bottom center",
-      },
-    });
-
-    tl.from(".about-me", {
-      opacity: 0,
-      scale: 2,
-      duration: 0.4,
-      rotate:720,
-      x:1500
-    });
-    tl.from(".about-me-text", {
-      opacity: 0,
-      scale: 4,
-      duration: 0.8,
-      x:1500
-    });
-  }, { scope: sectionRef });
   return (
-    <section ref={sectionRef} className="flex flex-col items-center justify-center mt-15 px-4 bg-slate-50 ">
-      <h2 className="about-me text-4xl font-extrabold text-gray-800 mb-4 tracking-tighter mt-10">
+    <section className="flex flex-col items-center justify-center mt-15 px-4 bg-slate-50 ">
+      <h2 className="text-4xl font-extrabold text-gray-800 mb-4 tracking-tighter mt-10">
         ABOUT ME
       </h2>
       <div className="w-8 h-1.5 bg-cyan-500 mb-8 rounded-xl"></div>
-      <p className="about-me-text text-center text-gray-600 max-w-3xl text-lg">
+      <p className="text-center text-gray-600 max-w-3xl text-lg">
         Here you will find more information about me, what I do, and my current
         skills mostly in terms of programming and technology
       </p>
