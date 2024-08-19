@@ -20,7 +20,7 @@ function MainPage() {
       <section id="projects" className="scroll-mt-24" >
         <Project />
       </section>
-      <section id="contact" >
+      <section id="contact" className="scroll-mt-24">
         <Contact />
       </section>
       <Footer />

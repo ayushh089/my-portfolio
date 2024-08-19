@@ -3,7 +3,7 @@ import { BsLinkedin, BsTwitter, BsGithub } from "react-icons/bs";
 
 function Footer() {
   return (
-    <div className="mt-5 bg-black text-white rounded-t-xl">
+    <div className=" bg-black text-white rounded-t-xl">
       <div className="w-full py-10 px-6 md:px-10 lg:px-20">
         <div className="flex flex-col md:flex-row justify-between items-start md:items-center">
           {/* Left Section */}
