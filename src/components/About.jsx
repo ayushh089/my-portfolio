@@ -2,7 +2,7 @@ import React from "react";
 import skillData from "./skills.json";
 function About() {
   return (
-    <section className="flex flex-col items-center justify-center mt-15 px-4 bg-slate-50 ">
+    <section className="flex flex-col items-center justify-center mt-15 px-5 bg-slate-50 ">
       <h2 className="text-4xl font-extrabold text-gray-800 mb-4 tracking-tighter mt-10">
         ABOUT ME
       </h2>

@@ -76,7 +76,7 @@ function Home() {
             </div>
           </a>
           <a
-            href="https://drive.google.com/file/d/1A8oGmJljZ7w7l_DqLjo1ScAPBrdOCqHg/view?usp=sharing"
+            href="https://drive.google.com/file/d/1ry_FvZvdb5Y-CbKECxRDMm-AXtRM3zjO/view?usp=sharing"
             target="_blank"
           >
             <div className="inline-block mt-10 resume-button sm:ml-10">
