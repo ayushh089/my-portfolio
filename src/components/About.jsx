@@ -16,16 +16,13 @@ function About() {
           <div className="font-bold text-2xl">Get to know me!</div>
           <div className="mt-5 text-lg font-normal text-wrap">
             <div className="font-thin">
-              I'm a Frontend Focused Web Developer building and managing the
-              Front-end of Websites and Web Applications that leads to the
-              success of the overall product.Check out some of my work in the
-              Projects section.
+              I'm a Full Stack Developer building and managing both the
+              Front-end and Back-end of Websites and Web Applications that lead
+              to the success of the overall product. Check out some of my work
+              in the Projects section.
             </div>
             <div className="font-thin">
-              I also like sharing content related to the stuff that I have
-              learned over the years in Web Development so it can help other
-              people of the Dev Community. Feel free to Connect or Follow me on
-              my{" "}
+              Feel free to Connect or Follow me on my{" "}
               <a
                 href="https://www.linkedin.com/in/guptaayush1280"
                 target="_blank"
@@ -40,9 +37,10 @@ function About() {
               experience then don't hesitate to contact me.
             </div>
           </div>
-          <div className="inline-block mt-8">
-            <button
-              className="bg-cyan-600 text-white font-semibold rounded-lg mb-12
+          <a href="#contact">
+            <div className="inline-block mt-8">
+              <button
+                className="bg-cyan-600 text-white font-semibold rounded-lg mb-12
                    w-44 h-12
                    md:text-1xl text-base 
                    flex items-center justify-center
@@ -51,10 +49,11 @@ function About() {
                    transition duration-300 ease-in-out 
                    hover:bg-cyan-700 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:ring-opacity-50
                    transform hover:scale-105"
-            >
-              Contact
-            </button>
-          </div>
+              >
+                Contact
+              </button>
+            </div>
+          </a>
         </div>
         <div className="mt-10 lg:mt-0 flex flex-col lg:max-w-[50%] lg:ml-32">
           <div className="font-bold text-2xl">My Skills</div>

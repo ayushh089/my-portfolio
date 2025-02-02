@@ -1,4 +1,4 @@
-import React from 'react';
+import React from "react";
 import { BsLinkedin, BsTwitter, BsGithub } from "react-icons/bs";
 
 function Footer() {
@@ -12,17 +12,15 @@ function Footer() {
               Ayush Gupta
             </h3>
             <p className="text-sm md:text-base max-w-sm font-thin">
-              A Frontend focused Web Developer building the Frontend of
-              Websites and Web Applications that leads to the success of the
+              A Full Stack Web Developer building both the Frontend and Backend
+              of Websites and Web Applications that leads to the success of the
               overall product.
             </p>
           </div>
 
           {/* Right Section - Social Links */}
           <div className="text-left md:text-left">
-            <h3 className="text-xl md:text-2xl font-extrabold mb-4">
-              SOCIAL
-            </h3>
+            <h3 className="text-xl md:text-2xl font-extrabold mb-4">SOCIAL</h3>
             <div className="flex justify-start md:justify-start space-x-4">
               <a
                 href="https://www.linkedin.com/in/guptaayush1280"

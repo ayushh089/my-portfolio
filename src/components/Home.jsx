@@ -76,9 +76,8 @@ function Home() {
             </div>
           </a>
           <a
-            href="https://drive.google.com/file/d/1ry_FvZvdb5Y-CbKECxRDMm-AXtRM3zjO/view?usp=sharing"
-            target="_blank"
-          >
+            href="https://drive.google.com/drive/folders/1ZiuVvOiHp4q5sxfyHet8XZVqGDmZI36p?usp=sharingFvZvdb5Y-CbKECxRDMm-AXtRM3zjO/view?usp=sharing"
+            target="_blank">
             <div className="inline-block mt-10 resume-button sm:ml-10">
               <button
                 className="bg-cyan-600 text-white font-semibold rounded-lg 

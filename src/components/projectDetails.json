@@ -1,8 +1,11 @@
 {
-    "projects": {
-      "p1": "Dopefolio is a successful Open-Source project that I created which has been featured on some of the biggest tech sites like CSS-Tricks, Hostinger, etc., and is used by thousands of developers globally.",
-      "p2": "Dopefolio is a successful Open-Source project that I created which has been featured on some of the biggest tech sites like CSS-Tricks, Hostinger, etc., and is used by thousands of developers globally.",
-      "p3": "Dopefolio is a successful Open-Source project that I created which has been featured on some of the biggest tech sites like CSS-Tricks, Hostinger, etc., and is used by thousands of developers globally."
-    }
+  "projects": {
+    "p1": [
+      {
+        "name": "InkCode",
+        "desc": "A Real-Time Collaborative Code Editor that allows users to write, run, and debug code in multiple programming languages. It features real-time collaboration, file management (download/open). Built with modern web technologies for seamless user experience.",
+        "link": "https://ink-code-frontend.vercel.app"
+      }
+    ]
   }
-  
+}
