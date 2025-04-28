@@ -1,16 +1,65 @@
 {
     "skills": [
-        "C++",
-        "JavaScript",
-        "Python",
-        "Node.js",
-        "Express.js",
-        "React",
-        "Tailwind CSS",
-        "MySQL",
-        "MongoDb",
-        "Git",
-        "GitHub",
-        "Postman"
+        {
+            "name": "React",
+            "logo": "react.png"
+        },
+        {
+            "name": "C++",
+            "logo": "cpp.png"
+        },
+        {
+            "name": "JavaScript",
+            "logo": "js.png"
+        },
+        {
+            "name": "Python",
+            "logo": "python.png"
+        },
+        {
+            "name": "Node.js",
+            "logo": "nodejs.png"
+        },
+        {
+            "name": "Express.js",
+            "logo": "expressjs.png"
+        },
+        {
+            "name": "Tailwind CSS",
+            "logo": "tailwind.png"
+        },
+        {
+            "name": "MySQL",
+            "logo": "mysql.png"
+        },
+
+        {
+            "name": "Git",
+            "logo": "git.png"
+        },
+        {
+            "name": "GitHub",
+            "logo": "github.png"
+        },
+        {
+            "name": "Postman",
+            "logo": "postman.png"
+        },
+        {
+            "name": "Flutter",
+            "logo": "flutter.png"
+        },
+        {
+            "name": "Dart",
+            "logo": "dart.png"
+        },
+        {
+            "name": "Blockchain",
+            "logo": "blockchain.png"
+        },
+        {
+            "name": "Solidity",
+            "logo": "solidity.png"
+        }
     ]
 }
