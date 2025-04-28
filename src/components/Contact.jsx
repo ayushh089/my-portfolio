@@ -9,7 +9,7 @@ function Contact() {
     setResult("Sending....");
     const formData = new FormData(event.target);
 
-    formData.append("access_key", "904ce710-e16d-4038-8de5-fc2d1a931f1c");
+    formData.append("access_key", import.meta.env.VITE_PRIVATE_KEY);
 
     const response = await fetch("https://api.web3forms.com/submit", {
       method: "POST",
@@ -36,7 +36,6 @@ function Contact() {
     <>
       <section className="relative min-h-screen w-full overflow-hidden bg-gradient-to-b from-slate-50 to-slate-100 dark:from-slate-900 dark:to-slate-800 px-5 flex flex-col items-center justify-center py-10">
         
-        {/* Animated background elements */}
         <div className="absolute inset-0 overflow-hidden z-0">
           <div className="animated-bg-circle absolute top-[10%] left-[15%] w-[300px] h-[300px] rounded-full bg-cyan-500/5 dark:bg-cyan-500/10"></div>
           <div className="animated-bg-circle absolute bottom-[20%] right-[10%] w-[400px] h-[400px] rounded-full bg-cyan-500/5 dark:bg-cyan-500/10"></div>
@@ -44,10 +43,8 @@ function Contact() {
           <div className="animated-bg-circle absolute bottom-[30%] left-[5%] w-[250px] h-[250px] rounded-full bg-cyan-600/5 dark:bg-cyan-600/10"></div>
         </div>
 
-        {/* Background pattern */}
         <div className="absolute inset-0 bg-[url('https://www.rammaheshwari.com/assets/svg/common-bg.svg')] bg-cover bg-center opacity-10"></div>
 
-        {/* Main content */}
         <div className="relative z-10 flex flex-col items-center justify-center h-full max-w-5xl mx-auto px-6">
           <h2 className="text-4xl font-extrabold text-white mb-4 tracking-tighter mt-10">
             CONTACT
@@ -92,7 +89,6 @@ function Contact() {
           </div>
         </div>
 
-        {/* Decorative elements */}
         <div className="absolute bottom-10 left-10 w-20 h-20 border-l-2 border-b-2 border-cyan-500/20 rounded-bl-xl"></div>
         <div className="absolute top-10 right-10 w-20 h-20 border-t-2 border-r-2 border-cyan-500/20 rounded-tr-xl"></div>
 

@@ -14,7 +14,6 @@ function Project() {
   useEffect(() => {
     const elem = aboutRef.current;
 
-    // Animate the About section
     gsap.fromTo(
       elem,
       { opacity: 0, y: 100 },
@@ -38,7 +37,6 @@ function Project() {
       id="about"
       className="relative min-h-screen w-full overflow-hidden bg-gradient-to-b from-slate-50 to-slate-100 dark:from-slate-900 dark:to-slate-800 px-5 flex flex-col items-center justify-center py-10"
     >
-      {/* Animated background elements */}
       <div className="absolute inset-0 overflow-hidden z-0">
         <div className="animated-bg-circle absolute top-[10%] left-[15%] w-[300px] h-[300px] rounded-full bg-cyan-500/5 dark:bg-cyan-500/10"></div>
         <div className="animated-bg-circle absolute bottom-[20%] right-[10%] w-[400px] h-[400px] rounded-full bg-cyan-500/5 dark:bg-cyan-500/10"></div>
@@ -46,7 +44,6 @@ function Project() {
         <div className="animated-bg-circle absolute bottom-[30%] left-[5%] w-[250px] h-[250px] rounded-full bg-cyan-600/5 dark:bg-cyan-600/10"></div>
       </div>
 
-      {/* Background pattern */}
       <div className="absolute inset-0 bg-[url('https://www.rammaheshwari.com/assets/svg/common-bg.svg')] bg-cover bg-center opacity-10"></div>
 
       {/* Main content */}
@@ -101,7 +98,6 @@ function Project() {
         </div>
       </div>
 
-      {/* Decorative elements */}
       <div className="absolute bottom-10 left-10 w-20 h-20 border-l-2 border-b-2 border-cyan-500/20 rounded-bl-xl"></div>
       <div className="absolute top-10 right-10 w-20 h-20 border-t-2 border-r-2 border-cyan-500/20 rounded-tr-xl"></div>
     </section>

@@ -9,14 +9,12 @@ function Home() {
   const [typed, setTyped] = useState(false);
   const [typedText, setTypedText] = useState("");
 
-  // Store the complete text once typing is done
   const completeText =
     "A Result-Oriented Full Stack and Blockchain Developer building Scalable Web Applications and Smart Contract Solutions that drive product success.";
 
   useGSAP(() => {
     const tl = gsap.timeline();
 
-    // Animate background elements
     tl.from(
       ".animated-bg-circle",
       {
@@ -29,7 +27,6 @@ function Home() {
       0
     );
 
-    // Main animations
     tl.from(
       ".my-bg-logo",
       {
@@ -96,7 +93,6 @@ function Home() {
       id="home"
       className="relative h-screen w-full overflow-hidden bg-gradient-to-b from-slate-50 to-slate-100 dark:from-slate-900 dark:to-slate-800"
     >
-      {/* Animated background elements */}
       <div className="absolute inset-0 overflow-hidden z-0">
         <div className="animated-bg-circle absolute top-[10%] left-[15%] w-[300px] h-[300px] rounded-full bg-cyan-500/5 dark:bg-cyan-500/10"></div>
         <div className="animated-bg-circle absolute bottom-[20%] right-[10%] w-[400px] h-[400px] rounded-full bg-cyan-500/5 dark:bg-cyan-500/10"></div>
@@ -104,17 +100,14 @@ function Home() {
         <div className="animated-bg-circle absolute bottom-[30%] left-[5%] w-[250px] h-[250px] rounded-full bg-cyan-600/5 dark:bg-cyan-600/10"></div>
       </div>
 
-      {/* Background pattern */}
       <div className="absolute inset-0 bg-[url('https://www.rammaheshwari.com/assets/svg/common-bg.svg')] bg-cover bg-center opacity-10"></div>
 
-      {/* Background logo */}
       <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
         <div className="my-bg-logo bg-[url('./assets/ayush.png')] bg-cover bg-center opacity-[0.03] w-[700px] h-[700px] rounded-full"></div>
       </div>
 
-      {/* Main content */}
       <div className="relative z-10 flex flex-col items-center justify-center h-full max-w-5xl mx-auto px-6">
-        {/* Add your content here */}
+      
         <div className="text-center">
           <h1 className="my-intro text-black dark:text-white font-extrabold font-body text-5xl sm:text-6xl md:text-7xl  tracking-wider sm:tracking-widest mb-6 sm:mb-8 text-transparent bg-clip-text bg-gradient-to-r from-cyan-600 to-cyan-800 dark:from-cyan-400 dark:to-cyan-600">
             hey, i'm ayush gupta
@@ -135,7 +128,6 @@ function Home() {
                   deleteSpeed={0}
                   delaySpeed={1000}
                   onType={(text) => {
-                    // This helps with the flicker when switching to static text
                     setTypedText(text);
                   }}
                   onTypeDone={() => {
@@ -222,7 +214,6 @@ function Home() {
         </div>
       </div>
 
-      {/* Decorative elements */}
       <div className="absolute bottom-10 left-10 w-20 h-20 border-l-2 border-b-2 border-cyan-500/20 rounded-bl-xl"></div>
       <div className="absolute top-10 right-10 w-20 h-20 border-t-2 border-r-2 border-cyan-500/20 rounded-tr-xl"></div>
     </section>

@@ -6,7 +6,7 @@ function Footer() {
     <div className=" bg-black text-white">
       <div className="w-full py-10 px-6 md:px-10 lg:px-20">
         <div className="flex flex-col md:flex-row justify-between items-start md:items-center">
-          {/* Left Section */}
+  
           <div className="mb-6 md:mb-0">
             <h3 className="text-xl md:text-2xl font-extrabold mb-2">
               Ayush Gupta
@@ -21,7 +21,6 @@ function Footer() {
             </p>
           </div>
 
-          {/* Right Section - Social Links */}
           <div className="text-left md:text-left">
             <h3 className="text-xl md:text-2xl font-extrabold mb-4">SOCIAL</h3>
             <div className="flex justify-start md:justify-start space-x-4">
