@@ -1,20 +1,20 @@
-"use client"
+"use client";
 
-import { useState, useEffect } from "react"
-import { useGSAP } from "@gsap/react"
-import gsap from "gsap"
-import { Typewriter } from "react-simple-typewriter"
+import { useState, useEffect } from "react";
+import { useGSAP } from "@gsap/react";
+import gsap from "gsap";
+import { Typewriter } from "react-simple-typewriter";
 
 function Home() {
-  const [typed, setTyped] = useState(false)
-  const [typedText, setTypedText] = useState("")
+  const [typed, setTyped] = useState(false);
+  const [typedText, setTypedText] = useState("");
 
   // Store the complete text once typing is done
   const completeText =
-    "A Result-Oriented Full Stack and Blockchain Developer building Scalable Web Applications and Smart Contract Solutions that drive product success."
+    "A Result-Oriented Full Stack and Blockchain Developer building Scalable Web Applications and Smart Contract Solutions that drive product success.";
 
   useGSAP(() => {
-    const tl = gsap.timeline()
+    const tl = gsap.timeline();
 
     // Animate background elements
     tl.from(
@@ -26,8 +26,8 @@ function Home() {
         duration: 1.5,
         ease: "power3.out",
       },
-      0,
-    )
+      0
+    );
 
     // Main animations
     tl.from(
@@ -38,8 +38,8 @@ function Home() {
         duration: 1.2,
         ease: "power2.out",
       },
-      0.3,
-    )
+      0.3
+    );
 
     tl.from(
       ".my-intro",
@@ -49,8 +49,8 @@ function Home() {
         duration: 0.8,
         ease: "back.out(1.7)",
       },
-      1,
-    )
+      1
+    );
 
     tl.from(
       ".typewriter-container",
@@ -58,8 +58,8 @@ function Home() {
         opacity: 0,
         duration: 0.6,
       },
-      1.4,
-    )
+      1.4
+    );
 
     tl.from(
       ".button-container",
@@ -69,8 +69,8 @@ function Home() {
         duration: 0.8,
         ease: "power2.out",
       },
-      1.8,
-    )
+      1.8
+    );
 
     tl.from(
       ".project-button, .resume-button",
@@ -81,15 +81,15 @@ function Home() {
         duration: 0.6,
         ease: "back.out(1.7)",
       },
-      2,
-    )
-  })
+      2
+    );
+  });
 
   useEffect(() => {
     if (typed) {
-      setTypedText(completeText)
+      setTypedText(completeText);
     }
-  }, [typed])
+  }, [typed]);
 
   return (
     <section
@@ -97,7 +97,7 @@ function Home() {
       className="relative h-screen w-full overflow-hidden bg-gradient-to-b from-slate-50 to-slate-100 dark:from-slate-900 dark:to-slate-800"
     >
       {/* Animated background elements */}
-      <div className="absolute inset-0 overflow-hidden">
+      <div className="absolute inset-0 overflow-hidden z-0">
         <div className="animated-bg-circle absolute top-[10%] left-[15%] w-[300px] h-[300px] rounded-full bg-cyan-500/5 dark:bg-cyan-500/10"></div>
         <div className="animated-bg-circle absolute bottom-[20%] right-[10%] w-[400px] h-[400px] rounded-full bg-cyan-500/5 dark:bg-cyan-500/10"></div>
         <div className="animated-bg-circle absolute top-[40%] right-[20%] w-[200px] h-[200px] rounded-full bg-cyan-600/5 dark:bg-cyan-600/10"></div>
@@ -114,9 +114,10 @@ function Home() {
 
       {/* Main content */}
       <div className="relative z-10 flex flex-col items-center justify-center h-full max-w-5xl mx-auto px-6">
+        {/* Add your content here */}
         <div className="text-center">
-          <h1 className="my-intro text-black dark:text-white font-extrabold font-body text-5xl sm:text-6xl md:text-7xl uppercase tracking-wider sm:tracking-widest mb-6 sm:mb-8 text-transparent bg-clip-text bg-gradient-to-r from-cyan-600 to-cyan-800 dark:from-cyan-400 dark:to-cyan-600">
-            Hey, I'm Ayush Gupta
+          <h1 className="my-intro text-black dark:text-white font-extrabold font-body text-5xl sm:text-6xl md:text-7xl  tracking-wider sm:tracking-widest mb-6 sm:mb-8 text-transparent bg-clip-text bg-gradient-to-r from-cyan-600 to-cyan-800 dark:from-cyan-400 dark:to-cyan-600">
+            hey, i'm ayush gupta
           </h1>
 
           <div className="typewriter-container relative max-w-3xl mx-auto mb-12">
@@ -135,10 +136,10 @@ function Home() {
                   delaySpeed={1000}
                   onType={(text) => {
                     // This helps with the flicker when switching to static text
-                    setTypedText(text)
+                    setTypedText(text);
                   }}
                   onTypeDone={() => {
-                    setTyped(true)
+                    setTyped(true);
                   }}
                 />
               ) : (
@@ -147,7 +148,7 @@ function Home() {
             </p>
           </div>
 
-          <div className="button-container flex flex-col sm:flex-row justify-center items-center mt-8 space-y-4 sm:space-y-0 sm:space-x-6">
+          <div className="mt-28 button-container flex flex-col sm:flex-row justify-center items-center mt-8 space-y-4 sm:space-y-0 sm:space-x-6">
             <a href="#projects" className="project-button group">
               <button
                 className="bg-gradient-to-r from-cyan-600 to-cyan-700 text-white font-semibold rounded-xl
@@ -225,7 +226,7 @@ function Home() {
       <div className="absolute bottom-10 left-10 w-20 h-20 border-l-2 border-b-2 border-cyan-500/20 rounded-bl-xl"></div>
       <div className="absolute top-10 right-10 w-20 h-20 border-t-2 border-r-2 border-cyan-500/20 rounded-tr-xl"></div>
     </section>
-  )
+  );
 }
 
-export default Home
+export default Home;
