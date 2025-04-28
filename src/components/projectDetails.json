@@ -6,6 +6,13 @@
         "desc": "A Real-Time Collaborative Code Editor that allows users to write, run, and debug code in multiple programming languages. It features real-time collaboration, file management (download/open). Built with modern web technologies for seamless user experience.",
         "link": "https://ink-code-frontend.vercel.app"
       }
+    ],
+    "p2": [
+      {
+        "name": "AyushmaanChain",
+        "desc": "AyushmaanChain is a blockchain-based healthcare platform that enables secure, tamper-proof management of medical records, prescription NFTs, and drug traceability. It ensures real-time verification, decentralized storage, and role-based access control for doctors, patients, and pharmacies. Built with modern blockchain technologies to deliver a transparent and trustworthy healthcare ecosystem.",
+        "link": "https://github.com/ayushh089/AyushmaanBlock"
+      }
     ]
   }
 }

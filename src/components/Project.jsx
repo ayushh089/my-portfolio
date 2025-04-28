@@ -1,35 +1,43 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useRef } from "react";
 import projectsData from "./projectDetails.json";
 import p1 from "../assets/p1.jpeg";
-import p2 from "../assets/p2.jpeg";
-import p3 from "../assets/p3.jpeg";
+import p2 from "../assets/p2.png";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 
-const images = { p1, p2, p3 };
+const images = { p1, p2 };
 
 gsap.registerPlugin(ScrollTrigger);
 
 function Project() {
+  const aboutRef = useRef(null);
   useEffect(() => {
-    gsap.utils.toArray(".project-item").forEach((item) => {
-      gsap.from(item, {
-        opacity: 0,
-        y: 50,
-        duration: 1.2,
-        ease: "power2.out",
+    const elem = aboutRef.current;
+
+    // Animate the About section
+    gsap.fromTo(
+      elem,
+      { opacity: 0, y: 100 },
+      {
+        opacity: 1,
+        y: 0,
+        duration: 1.5,
+        ease: "power3.out",
         scrollTrigger: {
-          trigger: item,
-          start: "top bottom",
-          end: "top center",
-          toggleActions: "play none none reverse",
+          trigger: elem,
+          start: "top 80%",
+          toggleActions: "play none none none",
         },
-      });
-    });
+      }
+    );
   }, []);
 
   return (
-    <section className="relative flex flex-col items-center justify-center mt-15 px-4 bg-gradient-to-b from-slate-50 to-slate-100 dark:from-slate-900 dark:to-slate-800">
+    <section
+      ref={aboutRef}
+      id="about"
+      className="relative min-h-screen w-full overflow-hidden bg-gradient-to-b from-slate-50 to-slate-100 dark:from-slate-900 dark:to-slate-800 px-5 flex flex-col items-center justify-center py-10"
+    >
       {/* Animated background elements */}
       <div className="absolute inset-0 overflow-hidden z-0">
         <div className="animated-bg-circle absolute top-[10%] left-[15%] w-[300px] h-[300px] rounded-full bg-cyan-500/5 dark:bg-cyan-500/10"></div>
@@ -52,7 +60,7 @@ function Project() {
           created, with each project containing its own case study.
         </p>
 
-        <div className="flex flex-col  mt-20 justify-center px-4 md:px-36 sm:w-full md:w-screen">
+        <div className="project-item flex flex-col  mt-20 justify-center px-4 md:px-36 sm:w-full md:w-screen">
           {Object.keys(projectsData.projects).map((key, index) =>
             projectsData.projects[key].map((project, idx) => (
               <div
@@ -60,7 +68,7 @@ function Project() {
                 className="flex flex-col sm:flex-row sm:items-center mb-20"
               >
                 <div className="w-full sm:w-1/2">
-                  <img src={images[key]} alt={key} className="w-full h-auto" />
+                  <img src={images[key]} alt={key} className="w-full h-full" />
                 </div>
                 <div className="flex flex-col justify-center items-center sm:items-start sm:justify-start mt-8 sm:mt-0 sm:ml-8 w-full sm:w-1/2">
                   <h2 className=" text-3xl font-bold mb-4 text-white">
