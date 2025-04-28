@@ -3,7 +3,7 @@ import { BsLinkedin, BsTwitter, BsGithub } from "react-icons/bs";
 
 function Footer() {
   return (
-    <div className=" bg-black text-white rounded-t-xl">
+    <div className=" bg-black text-white">
       <div className="w-full py-10 px-6 md:px-10 lg:px-20">
         <div className="flex flex-col md:flex-row justify-between items-start md:items-center">
           {/* Left Section */}
@@ -11,10 +11,13 @@ function Footer() {
             <h3 className="text-xl md:text-2xl font-extrabold mb-2">
               Ayush Gupta
             </h3>
-            <p className="text-sm md:text-base max-w-sm font-thin">
-              A Full Stack Web Developer building both the Frontend and Backend
-              of Websites and Web Applications that leads to the success of the
-              overall product.
+            <p className="text-sm md:text-base max-w-xl font-thin">
+              A Full Stack Web Developer skilled in building both the frontend
+              and backend of websites and web applications. With expertise in
+              various programming languages and technologies such as C++,
+              JavaScript, Java, React, Spring Boot, and Blockchain, I focus on
+              developing scalable and optimized solutions that contribute to the
+              success of the overall product.
             </p>
           </div>
 
@@ -51,7 +54,7 @@ function Footer() {
         </div>
       </div>
       <div className="text-center py-4 text-sm">
-        © Copyright 2024 . Made by{" "}
+        © Copyright 2025 . Made by{" "}
         <a
           href="https://www.linkedin.com/in/guptaayush1280"
           className="font-bold text-cyan-500"

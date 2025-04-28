@@ -39,9 +39,9 @@ function About() {
         {
           opacity: 1,
           scale: 1,
-          duration: 0.8,
-          ease: "back.out(1.7)",
-          delay: index * 0.1, // small delay between cards
+          duration: 0.4,
+          ease: "back.out(0.8)",
+          delay: index * 0.04, // small delay between cards
           scrollTrigger: {
             trigger: card,
             start: "top 90%",
@@ -76,7 +76,8 @@ function About() {
         </h2>
         <div className="w-8 h-1.5 bg-cyan-500 mb-8 rounded-xl"></div>
         <p className="text-center text-gray-600 dark:text-gray-300 max-w-3xl text-lg mb-20">
-          Here you will find more information about me, what I do, and my current skills mostly in terms of programming and technology.
+          Here you will find more information about me, what I do, and my
+          current skills mostly in terms of programming and technology.
         </p>
 
         <div className="flex flex-col lg:flex-row items-center justify-between w-full">
@@ -87,7 +88,9 @@ function About() {
             </h3>
             <div className="text-lg font-normal space-y-1 text-gray-700 dark:text-gray-300">
               <p>
-                I'm a Full Stack Developer skilled in building and managing both the Front-end and Back-end of scalable Websites, Web Applications, and Blockchain-based solutions. 
+                I'm a Full Stack Developer skilled in building and managing both
+                the Front-end and Back-end of scalable Websites, Web
+                Applications, and Blockchain-based solutions.
               </p>
               <p>
                 Feel free to Connect or Follow me on{" "}
@@ -98,15 +101,29 @@ function About() {
                   className="text-cyan-600 font-bold "
                 >
                   LinkedIn
-                </a>.
+                </a>
+                .
               </p>
               <p>
-                I'm open to Job opportunities where I can contribute, learn, and grow.
+                I'm open to Job opportunities where I can contribute, learn, and
+                grow.
               </p>
             </div>
 
             <a href="#contact">
-              <button className="mt-8 bg-cyan-600 text-white font-semibold rounded-lg w-full h-12 transition transform hover:scale-105 hover:translate-y-[-3px] shadow-lg shadow-cyan-500/20 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:ring-opacity-50">
+              <button
+                className="bg-gradient-to-r from-cyan-600 to-cyan-700 text-white font-semibold rounded-xl mt-6 w-full
+                 h-16
+                 text-lg
+                 flex items-center justify-center
+                 tracking-[2px]
+                 uppercase
+                 transition duration-300 ease-in-out 
+                 shadow-lg shadow-cyan-500/20
+                 hover:shadow-xl hover:shadow-cyan-500/30
+                 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:ring-opacity-50
+                 transform hover:scale-105 hover:translate-y-[-3px]"
+              >
                 Contact
               </button>
             </a>
