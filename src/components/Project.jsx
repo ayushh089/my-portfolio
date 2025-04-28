@@ -52,7 +52,7 @@ function Project() {
           created, with each project containing its own case study.
         </p>
 
-        <div className="flex flex-col  mt-20 justify-center px-4 md:px-36 w-screen">
+        <div className="flex flex-col  mt-20 justify-center px-4 md:px-36 sm:w-full md:w-screen">
           {Object.keys(projectsData.projects).map((key, index) =>
             projectsData.projects[key].map((project, idx) => (
               <div
