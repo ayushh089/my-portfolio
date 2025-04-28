@@ -7,7 +7,7 @@ import gsap from "gsap";
 const Navbar = () => {
   useGSAP(() => {
     var tl = gsap.timeline();
-    tl.from(".my-logo", {
+    tl.from(".logo-text", {
       y: -20,
       scale: 2,
       opacity: 0,
@@ -30,14 +30,13 @@ const Navbar = () => {
 
   return (
     <>
-      <nav className="fixed top-0 w-full flex justify-between items-center h-24 px-4 bg-white z-50 border-b-2">
-        <a href="#home">
-          <img
-            src={ayush_name}
-            className="my-logo h-20 w-20 mt-2 cursor-pointer"
-          ></img>
+      <nav className="fixed top-0 w-full flex justify-between items-center h-24 px-4 bg-blue z-50 border-b-2">
+        <a
+          href="#home"
+          className="flex items-center justify-center text-white text-xl font-bold hover:text-blue-200 transition duration-300 ease-in-out"
+        >
+          <p className="ml-8 text-2xl logo-text">ayush.dev</p>
         </a>
-
         <button
           className=" icon-bar md:hidden text-2xl"
           onClick={() => setMobile(!Mobile)}
@@ -53,7 +52,7 @@ const Navbar = () => {
           <li className="border-b md:border-none">
             <a
               href="#home"
-              className="block text-xl text-black py-4 md:py-0 pl-6 md:pl-0 font-bold hover:text-cyan-500 hover:underline"
+              className="block text-xl text-white py-4 md:py-0 pl-6 md:pl-0 font-bold hover:text-cyan-500 hover:underline"
               onClick={() => setMobile(false)}
             >
               <h4>Home</h4>
@@ -62,7 +61,7 @@ const Navbar = () => {
           <li className="border-b md:border-none">
             <a
               href="#about"
-              className="block text-xl text-black py-4 md:py-0 pl-6 md:pl-0 font-bold hover:text-cyan-500 hover:underline"
+              className="block text-xl text-white py-4 md:py-0 pl-6 md:pl-0 font-bold hover:text-cyan-500 hover:underline"
               onClick={() => setMobile(false)}
             >
               <h4>About</h4>
@@ -71,7 +70,7 @@ const Navbar = () => {
           <li className="border-b md:border-none">
             <a
               href="#projects"
-              className="block text-xl text-black py-4 md:py-0 pl-6 md:pl-0 font-bold hover:text-cyan-500 hover:underline"
+              className="block text-xl text-white py-4 md:py-0 pl-6 md:pl-0 font-bold hover:text-cyan-500 hover:underline"
               onClick={() => setMobile(false)}
             >
               <h4>Projects</h4>
@@ -80,7 +79,7 @@ const Navbar = () => {
           <li className="border-b md:border-none">
             <a
               href="#contact"
-              className="block text-xl text-black py-4 md:py-0 pl-6 md:pl-0 font-bold hover:text-cyan-500 hover:underline"
+              className="block text-xl text-white py-4 md:py-0 pl-6 md:pl-0 font-bold hover:text-cyan-500 hover:underline"
               onClick={() => setMobile(false)}
             >
               <h4>Contact</h4>
