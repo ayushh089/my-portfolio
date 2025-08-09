@@ -1,10 +1,10 @@
 {
   "projects": {
-    "p1": [
+    "p3": [
       {
-        "name": "InkCode",
+        "name": "Codora",
         "desc": "A Real-Time Collaborative Code Editor that allows users to write, run, and debug code in multiple programming languages. It features real-time collaboration, file management (download/open). Built with modern web technologies for seamless user experience.",
-        "link": "https://ink-code-frontend.vercel.app"
+        "link": "https://codora.vercel.app"
       }
     ],
     "p2": [
@@ -12,6 +12,13 @@
         "name": "AyushmaanChain",
         "desc": "AyushmaanChain is a blockchain-based healthcare platform that enables secure, tamper-proof management of medical records, prescription NFTs, and drug traceability. It ensures real-time verification, decentralized storage, and role-based access control for doctors, patients, and pharmacies. Built with modern blockchain technologies to deliver a transparent and trustworthy healthcare ecosystem.",
         "link": "https://github.com/ayushh089/AyushmaanBlock"
+      }
+    ],
+    "p1": [
+      {
+        "name": "HomeHub",
+        "desc": "HomeHub is a home service request platform connecting residents with registered electricians, plumbers, and other professionals. It features secure payments, real-time service tracking, role-based access control, availability booking, reviews, and media storage on AWS S3. Built using Spring Boot and React, deployed on AWS EC2 with Nginx and SSL for production readiness.",
+        "link": "https://homehub.example.com"
       }
     ]
   }

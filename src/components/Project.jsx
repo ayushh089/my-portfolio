@@ -1,11 +1,12 @@
 import React, { useEffect, useRef } from "react";
 import projectsData from "./projectDetails.json";
-import p1 from "../assets/p1.jpeg";
+import p1 from "../assets/p1.png";
 import p2 from "../assets/p2.png";
+import p3 from "../assets/p3.png";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 
-const images = { p1, p2 };
+const images = { p1, p2, p3 };
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -64,8 +65,13 @@ function Project() {
                 key={`${index}-${idx}`}
                 className="flex flex-col sm:flex-row sm:items-center mb-20"
               >
-                <div className="w-full sm:w-1/2">
-                  <img src={images[key]} alt={key} className="w-full h-full" />
+                <div className="w-full sm:w-1/2 flex justify-center items-center">
+                  <img
+                    src={images[key]}
+                    alt={key}
+                    className="w-48 h-48 xs:w-56 xs:h-56 sm:w-60 sm:h-60 md:w-72 md:h-72 lg:w-80 lg:h-80 object-cover rounded-full shadow-lg transition-all duration-300"
+                    style={{ maxWidth: "100%", height: "auto" }}
+                  />
                 </div>
                 <div className="flex flex-col justify-center items-center sm:items-start sm:justify-start mt-8 sm:mt-0 sm:ml-8 w-full sm:w-1/2">
                   <h2 className=" text-3xl font-bold mb-4 text-white">
@@ -73,7 +79,7 @@ function Project() {
                   </h2>
                   <p className="text-white text-lg mb-8">{project.desc}</p>
                   <div className="w-full">
-                    <a href={project.link} target="_blank">
+                    <a href={project.link} target="_blank" rel="noopener noreferrer">
                       <button
                         className="bg-gradient-to-r from-cyan-600 to-cyan-700 text-white font-semibold rounded-xl mt-6 w-full
                  h-16
