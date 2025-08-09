@@ -18,7 +18,7 @@
       {
         "name": "HomeHub",
         "desc": "HomeHub is a home service request platform connecting residents with registered electricians, plumbers, and other professionals. It features secure payments, real-time service tracking, role-based access control, availability booking, reviews, and media storage on AWS S3. Built using Spring Boot and React, deployed on AWS EC2 with Nginx and SSL for production readiness.",
-        "link": "https://homehub.example.com"
+        "link": "https://homehub.social"
       }
     ]
   }
