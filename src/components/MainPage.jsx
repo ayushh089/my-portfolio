@@ -5,6 +5,8 @@ import Project from "./Project";
 import Footer from "./Footer";
 import Home from "./Home";
 import Contact from "./Contact";
+import Chatbot from "./Chatbot"; // Import the Chatbot component
+
 function MainPage() {
   return (
     <div className="relative">
@@ -24,6 +26,9 @@ function MainPage() {
         <Contact />
       </section>
       <Footer />
+      
+      {/* Add the Chatbot component */}
+      <Chatbot />
     </div>
   );
 }
