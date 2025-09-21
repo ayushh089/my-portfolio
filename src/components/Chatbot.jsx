@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 
 const Chatbot = () => {
   const BACKEND_URL = import.meta.env.VITE_BACKEND_URL || "http://localhost:8000";
@@ -12,6 +12,19 @@ const Chatbot = () => {
   const [inputMessage, setInputMessage] = useState("");
   const [isLoading, setIsLoading] = useState(false);
   const [expandedIndexes, setExpandedIndexes] = useState([]);
+  const [isMobile, setIsMobile] = useState(false);
+
+  // Check screen size on mount and resize
+  useEffect(() => {
+    const checkScreenSize = () => {
+      setIsMobile(window.innerWidth < 768);
+    };
+    
+    checkScreenSize();
+    window.addEventListener('resize', checkScreenSize);
+    
+    return () => window.removeEventListener('resize', checkScreenSize);
+  }, []);
 
   const handleSendMessage = async () => {
     if (inputMessage.trim() === "") return;
@@ -63,9 +76,13 @@ const Chatbot = () => {
   };
 
   return (
-    <div className="fixed bottom-6 right-6 z-50">
+    <div className={`fixed z-50 ${isMobile && chatOpen ? 'inset-0 bg-black/30' : 'bottom-6 right-6'}`}>
       {chatOpen && (
-        <div className="mb-4 w-[500px] h-[600px] bg-white dark:bg-gray-900 rounded-2xl shadow-2xl flex flex-col border border-gray-200 dark:border-gray-700 backdrop-blur-sm">
+        <div className={`bg-white dark:bg-gray-900 rounded-2xl shadow-2xl flex flex-col border border-gray-200 dark:border-gray-700 backdrop-blur-sm
+             ${isMobile ? 
+            'fixed inset-4 m-auto max-w-full max-h-screen' : 
+            'w-[500px] h-[600px] mb-4'
+          }`}>
           {/* Header */}
           <div className="p-4 bg-blue-600 text-white rounded-t-2xl flex justify-between items-center">
             <div className="flex items-center space-x-3">
@@ -120,7 +137,7 @@ const Chatbot = () => {
                     </div>
                   )}
                   <div
-                    className={`p-3 rounded-2xl max-w-[75%] text-sm leading-relaxed ${
+                    className={`p-3 rounded-2xl max-w-[85%] text-sm leading-relaxed ${
                       msg.sender === "user"
                         ? "bg-blue-600 text-white shadow-lg"
                         : "bg-gray-100 dark:bg-gray-800 text-gray-800 dark:text-gray-200 shadow-md border border-gray-200 dark:border-gray-700"
@@ -211,40 +228,46 @@ const Chatbot = () => {
       )}
 
       {/* Floating button */}
-      <button
-        onClick={() => setChatOpen(!chatOpen)}
-        className="w-16 h-16 bg-blue-600 text-white rounded-full shadow-2xl flex items-center justify-center transition-all duration-300 hover:scale-110 transform hover:rotate-12"
-      >
-        {chatOpen ? (
-          <svg
-            className="w-6 h-6"
-            fill="none"
-            stroke="currentColor"
-            viewBox="0 0 24 24"
-          >
-            <path
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              strokeWidth={2}
-              d="M6 18L18 6M6 6l12 12"
-            />
-          </svg>
-        ) : (
-          <svg
-            className="w-6 h-6"
-            fill="none"
-            stroke="currentColor"
-            viewBox="0 0 24 24"
-          >
-            <path
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              strokeWidth={2}
-              d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"
-            />
-          </svg>
-        )}
-      </button>
+      {(!chatOpen || !isMobile) && (
+        <button
+          onClick={() => setChatOpen(!chatOpen)}
+          className={`bg-blue-600 text-white rounded-full shadow-2xl flex items-center justify-center transition-all duration-300 hover:scale-110 transform hover:rotate-12
+            ${isMobile ? 
+              'fixed bottom-6 right-6 w-14 h-14 z-50' : 
+              'w-16 h-16'
+            }`}
+        >
+          {chatOpen ? (
+            <svg
+              className="w-6 h-6"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth={2}
+                d="M6 18L18 6M6 6l12 12"
+              />
+            </svg>
+          ) : (
+            <svg
+              className="w-6 h-6"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth={2}
+                d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"
+              />
+            </svg>
+          )}
+        </button>
+      )}
     </div>
   );
 };
